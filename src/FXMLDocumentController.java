@@ -13,8 +13,17 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.stage.Window;
+import oopprojectv2.AddStudentController;
+import static oopprojectv2.AddStudentController.s;
+import static oopprojectv2.AddTeacherController.t;
+//import static oopprojectv2.AddCourseController.c;
 
 /**
  *
@@ -22,44 +31,104 @@ import javafx.stage.Stage;
  */
 public class FXMLDocumentController implements Initializable {
     
+    static college aast = new college();
+    static String p;
+
     @FXML
-    private Label label;
+     Label label;
+     Button add;
+   
     
     @FXML
-    private void showForm(ActionEvent event) {
+    private void teachers(ActionEvent event) {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("formShow.fxml"));
+            FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("formShow.fxml"));
+            Parent root2 = (Parent) fxmlLoader2.load();
+            Stage stage2 = new Stage();
+            // stage.initModality(Modality.APPLICATION_MODAL);
+            //stage.initStyle(StageStyle.UNDECORATED);
+            stage2.setTitle("Contents");
+            stage2.setScene(new Scene(root2));
+            stage2.show();
+           
+            p = "t";
+            
+            
+
+        } catch (Exception e) {
+            System.out.println("erer" + e.getCause());
+        }
+    }
+    
+    
+    @FXML
+    private void courses(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("formShow.fxml"));
+            Parent root2 = (Parent) fxmlLoader2.load();
+            Stage stage2 = new Stage();
+            // stage.initModality(Modality.APPLICATION_MODAL);
+            //stage.initStyle(StageStyle.UNDECORATED);
+            stage2.setTitle("Contents");
+            stage2.setScene(new Scene(root2));
+            stage2.show();
+            p = "c";
+            
+            
+
+        } catch (Exception e) {
+            System.out.println("erer" + e.getCause());
+        }
+    }
+    
+    
+    @FXML
+    private void students(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("formShow.fxml"));
+            Parent root2 = (Parent) fxmlLoader2.load();
+            Stage stage2 = new Stage();
+            // stage.initModality(Modality.APPLICATION_MODAL);
+            //stage.initStyle(StageStyle.UNDECORATED);
+            stage2.setTitle("Contents");
+            stage2.setScene(new Scene(root2));
+            stage2.show();
+           p = "s";
+            
+            
+
+        } catch (Exception e) {
+            System.out.println("erer" + e.getCause());
+        }
+    } 
+    
+
+    @FXML
+    private void Add(ActionEvent event) {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Add.fxml"));
             Parent root1 = (Parent) fxmlLoader.load();
             Stage stage = new Stage();
-           // stage.initModality(Modality.APPLICATION_MODAL);
+            // stage.initModality(Modality.APPLICATION_MODAL);
             //stage.initStyle(StageStyle.UNDECORATED);
-            stage.setTitle("");
+            stage.setTitle("Add");
             stage.setScene(new Scene(root1));
             stage.show();
+           
         } catch (Exception e) {
             System.out.println("error");
         }
     }
     
-    @FXML
-    private void addForm(ActionEvent event) {
-        try {
-            FXMLLoader fxmlLoader2 = new FXMLLoader(getClass().getResource("Add.fxml"));
-            Parent root2 = (Parent) fxmlLoader2.load();
-            Stage stage2 = new Stage();
-           // stage.initModality(Modality.APPLICATION_MODAL);
-            //stage.initStyle(StageStyle.UNDECORATED);
-            stage2.setTitle("");
-            stage2.setScene(new Scene(root2));
-            stage2.show();
-        } catch (Exception e) {
-            System.out.println(e.getCause());
-        }
-    }
+
     
+
+
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+       
+    }
+
 }

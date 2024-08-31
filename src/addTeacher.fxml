@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.text.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="535.0" style="-fx-background-color: #fca311;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+<AnchorPane id="AnchorPane" prefHeight="401.0" prefWidth="374.0" style="-fx-background-color: #fca311;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oopprojectv2.AddTeacherController">
    <children>
       <Label layoutX="49.0" layoutY="37.0" prefHeight="27.0" prefWidth="58.0" text="name" textFill="WHITE">
          <font>
@@ -35,16 +33,17 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="38.0" layoutY="215.0" text="Courses" textFill="WHITE">
+      <Label layoutX="38.0" layoutY="228.0" text="Course" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="145.0" layoutY="33.0" />
-      <TextField layoutX="145.0" layoutY="72.0" />
-      <TextField layoutX="145.0" layoutY="108.0" />
-      <TextField layoutX="145.0" layoutY="146.0" />
-      <TextField layoutX="145.0" layoutY="185.0" />
-      <ComboBox layoutX="145.0" layoutY="273.0" prefHeight="95.0" prefWidth="205.0" />
+      <TextField fx:id="name" layoutX="145.0" layoutY="33.0" />
+      <TextField fx:id="age" layoutX="145.0" layoutY="72.0" />
+      <TextField fx:id="id" layoutX="145.0" layoutY="108.0" />
+      <TextField fx:id="no" layoutX="145.0" layoutY="146.0" />
+      <TextField fx:id="address" layoutX="145.0" layoutY="185.0" />
+      <Button layoutX="139.0" layoutY="313.0" mnemonicParsing="false" onAction="#save" prefHeight="45.0" prefWidth="96.0" style="-fx-background-color: #14213d;" text="save" textFill="WHITE" />
+      <TextField fx:id="course" layoutX="145.0" layoutY="229.0" />
    </children>
 </AnchorPane>

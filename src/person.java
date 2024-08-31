@@ -36,6 +36,10 @@ public class person {
         this.age = age;
     }
 
+       public void setAge(int age, int add) {
+        this.age = age + add;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

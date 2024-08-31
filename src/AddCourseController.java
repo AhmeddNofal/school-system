@@ -13,6 +13,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+import static oopprojectv2.AddStudentController.s;
 import static oopprojectv2.FXMLDocumentController.aast;
 
 /**
@@ -20,42 +22,38 @@ import static oopprojectv2.FXMLDocumentController.aast;
  *
  * @author Amr
  */
-public class AddStudentController implements Initializable {
+public class AddCourseController implements Initializable {
 
     /**
      * Initializes the controller class.
      */
-    static student s = new student();
+    static course c = new course();
     @FXML
-    TextField studentName;
+    TextField name;
     @FXML
-    TextField studentAge;
-    @FXML
-    TextField studentId;
-    @FXML
-    TextField studentMajor;
-    @FXML
-    TextField studentAddress;
-    @FXML
-    TextField studentCourse;
+    TextField code;
 
     @FXML
-    private void save(ActionEvent event) {
+    private void saveCourse(ActionEvent event) {
+        try {
 
-        s.name = studentName.getText();
-        s.age = Integer.valueOf(studentAge.getText());
-        s.sId = Integer.parseInt(studentId.getText());
-        s.major = studentMajor.getText();
-        s.course = studentCourse.getText();
-        aast.students.add(s);
+            c.name = name.getText();
+            c.code = Integer.parseInt(code.getText());
 
-        //System.out.println(s.name);
+            aast.courses.add(c);
+        } catch (Exception e) {
+
+            System.out.println(e);
+        }
+
         ((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
+        //((Stage) (((Button) event.getSource()).getScene().getWindow())).close();
     }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+
     }
 
 }

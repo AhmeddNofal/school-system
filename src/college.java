@@ -5,13 +5,19 @@
  */
 package oopprojectv2;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Owner
  */
 public class college {
 
-    student[] students;
-    teacher[] teachers;
-    course[] courses;
+    static ArrayList<student> students = new ArrayList<student>();
+    static ArrayList<teacher> teachers = new ArrayList<teacher>();
+    static ArrayList<course> courses = new ArrayList<course>();
+
+    public college() {
+    }
+    
 }

@@ -13,6 +13,11 @@ public class course {
     String name;
     int code;
 
+    public course() {
+        this.name = "";
+        this.code = 0;
+    }
+
     public String getName() {
         return name;
     }

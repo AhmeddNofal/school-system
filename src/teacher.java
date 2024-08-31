@@ -11,8 +11,8 @@ package oopprojectv2;
  */
 public class teacher extends person {
     int phNo,tId;
-    String address;
-    course[] courses;
+    String address, course;
+    
 
     public teacher() {
         this.name = "";
@@ -20,25 +20,16 @@ public class teacher extends person {
         this.phNo = 0;
         this.tId = 0;
         this.address = "";
+        this.course = "";
        
     }
 
-    public teacher(String name, int age, int phNo, int tId, String address, course[] courses) {
+    public teacher(String name, int age, int phNo, int tId, String address,String course) {
         super(name,age);
         this.phNo = phNo;
         this.tId = tId;
         this.address = address;
-        this.courses = courses;
-    }
-
-  
-
-    public course[] getCourses() {
-        return courses;
-    }
-
-    public void setCourses(course[] courses) {
-        this.courses = courses;
+        this.course = course;
     }
 
 
@@ -68,8 +59,10 @@ public class teacher extends person {
         this.address = address;
     }
     
+
+    
     @Override
     public String toString() {
-        return "teacher{" + "phNo=" + phNo + ", tId=" + tId + ", address=" + address + ", courses=" + courses + '}';
+        return "teacher{" + "phNo=" + phNo + ", tId=" + tId + ", address=" + address + ", course=" + course + '}';
     }
 }

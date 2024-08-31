@@ -12,8 +12,9 @@ package oopprojectv2;
 public class student extends person {
 
     int sId;
-    String sAddress, major;
-    courseGrades[] courseGrades;
+    String sAddress, major, course;
+
+ 
 
     public student() {
         this.name = "";
@@ -21,23 +22,21 @@ public class student extends person {
         this.sId = 0;
         this.sAddress = "";
         this.major = "";
+        this.course = "";
     }
 
-    public student(String name, int age, int sId, String sAddress, String major, courseGrades[] courseGrades) {
+    public student(String name, int age, int sId, String sAddress, String major, String course) {
         super(name,age);
-        this.courseGrades = courseGrades;
+   
         this.sId = sId;
         this.sAddress = sAddress;
         this.major = major;
+        this.course = course;
     }
 
-    public courseGrades[] getCourseGrades() {
-        return courseGrades;
-    }
 
-    public void setCourseGrades(courseGrades[] courseGrades) {
-        this.courseGrades = courseGrades;
-    }
+
+
 
     public int getAge() {
         return age;
